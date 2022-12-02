@@ -1,0 +1,20 @@
+img{
+   height: 4rem;
+    
+}
+.header{
+    justify-content: center;
+    height: 10%;
+    color: white;
+    background: #150B03;
+}
+span{
+    display: flex;
+    align-items: center;
+}
+h1{
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    margin-top: 6px;
+    
+}

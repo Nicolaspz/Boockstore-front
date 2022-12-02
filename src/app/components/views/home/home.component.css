@@ -1,0 +1,12 @@
+.home{
+    width: 95%;
+    background: rgb(98, 182, 251);
+    margin: 1rem auto;
+    padding: 1.5rem;
+
+}
+@media(max-width:450px){
+    .home{
+        width: 70%;
+    }
+}
