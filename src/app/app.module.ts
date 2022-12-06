@@ -17,6 +17,9 @@ import { HomeComponent } from './components/views/home/home.component';
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component'; 
 import {MatButtonModule} from '@angular/material/button';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component'; 
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input'; 
+import {MatFormFieldModule} from '@angular/material/form-field'; 
 
 @NgModule({
   declarations: [
@@ -25,8 +28,9 @@ import { CategoriaCreateComponent } from './components/views/categoria/categoria
     FooterComponent,
     NavComponent,
     HomeComponent,
-    CategoriaReadComponent,
-    CategoriaCreateComponent
+    CategoriaCreateComponent,
+    CategoriaReadComponent
+    
     
   ],
   imports: [
@@ -40,7 +44,10 @@ import { CategoriaCreateComponent } from './components/views/categoria/categoria
     AppRoutingModule,
     MatTableModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
