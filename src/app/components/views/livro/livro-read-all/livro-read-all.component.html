@@ -4,7 +4,7 @@
     </div>
     <button  class="mat-elevation-z8" mat-stroked-button color="primary">Novo Livro</button>
     <div class="mat-elevation-z8 content-table" >
-      <table class="table" mat-table >
+      <table class="table" mat-table  [dataSource]="livros">
 
         
         <ng-container matColumnDef="id">
@@ -40,8 +40,8 @@
           </td>
         </ng-container>
       
-        <tr mat-header-row *matHeaderRowDef=""></tr>
-        <tr mat-row *matRowDef="let row; columns: "></tr>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
       
 

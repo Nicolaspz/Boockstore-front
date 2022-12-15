@@ -26,7 +26,7 @@ export class CategoriaUpdateComponent implements OnInit {
       //this.categoria= resposta;
       this.categoria.descricao=resposta.descricao;
       this.categoria.nome=resposta.nome;
-      console.log(this.categoria);
+      //console.log(this.categoria);
 
     });
   }
