@@ -30,4 +30,8 @@ mensagem(str:String):void{
     duration:3000
   })
 }
+findById(id:String):Observable<Categoria>{
+  const url =`${this.baseUrl}/categorias/${id}`;
+  return this.http.get<Categoria>(url);
+}
 }
