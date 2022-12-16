@@ -3,4 +3,5 @@ export interface Livro {
     titulo:String,
     nome_autor:String,
     texto:String
+   
 }

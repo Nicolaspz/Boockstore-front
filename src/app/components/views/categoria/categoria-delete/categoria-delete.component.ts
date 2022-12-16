@@ -37,26 +37,20 @@ categoria: Categoria ={
     });
   }
   Delete():void{
-    this.service.delete(this.categoria.id!).subscribe((resposta=>{
-      this.router.navigate(['categorias'])
-      this.service.mensagem("Categoria Eliminada com Sucesso")
-    }  
-    ))
-    
-  }
-
-  /*Deletee():void {
     this.service.delete(this.categoria.id!).subscribe((resposta)=>{
       this.router.navigate(['categorias'])
       this.service.mensagem("Categoria Eliminada com Sucesso")
-      
     }, err=>{
-      console.log(err.error.errors.fieldMessage);
-     // this.service.mensagem(err.error.errors[1])
+      //console.log(err.error.errors.fieldMessage);
+     this.service.mensagem(err.error.errors[1])
       for(let i=0; i < err.error.errors.length; i++){
           this.service.mensagem(err.error.errors[i].fieldMessage);
       }
-    } )
-  }*/
+    }  
+    )
+    
+  }
+
+  
 
 }
