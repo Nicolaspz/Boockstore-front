@@ -14,6 +14,7 @@ export class LivroCreateComponent implements OnInit {
   titulo = new FormControl('', [Validators.minLength(3)])
   nome_autor = new FormControl('', [Validators.minLength(6)])
   texto = new FormControl('', [Validators.minLength(20)])
+  
   Livro:Livro={
     titulo: '',
     nome_autor: '',
@@ -29,9 +30,11 @@ export class LivroCreateComponent implements OnInit {
 
   create():void{
    this.service.createLivro(this.Livro,this.id_cat).subscribe((resposta)=>{
+    this.router.navigate([`categorias/${this.id_cat}/livros`])
      this.service.mensagem("Livro Criado com Sucesso");
    }, err=>{
-    console.log(err.error.errors.fieldMessage);
+    this.router.navigate([`categorias/${this.id_cat}/livros`])
+    this.service.mensagem("Ocoreeu um erro ao Salvar Livros");
    })
   }
   getMessage(){
@@ -47,5 +50,8 @@ export class LivroCreateComponent implements OnInit {
 
     return true;
   }
-
+  cancelar():void{
+    this.router.navigate([`categorias/${this.id_cat}/livros`]);
+  }
+ 
 }

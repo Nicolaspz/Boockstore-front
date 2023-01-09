@@ -14,6 +14,7 @@ export class LivroReadAllComponent implements OnInit {
   ngOnInit(): void {
     this.id_cat=this.route.snapshot.paramMap.get('id')!;
     this.findAllByCategoria();
+    //console.log(this.id_cat)
   }
   constructor(private route: ActivatedRoute, private service:LivroService, private router:Router){}
   displayedColumns: string[] = ['id', 'titulo', 'livros', 'acao'];
